@@ -1,0 +1,45 @@
+<!-- views/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Dashboard</title>
+</head>
+
+<body>
+    <h1>Payment Dashboard</h1>
+    <form method="GET" action="/dashboard">
+        <input type="text" name="reff" placeholder="Search by reference">
+        <button type="submit">Search</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Reference</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% payments.forEach(payment => { %>
+                <tr>
+                    <td>
+                        <%= payment.reff %>
+                    </td>
+                    <td>
+                        <%= payment.amount %>
+                    </td>
+                    <td>
+                        <%= payment.status %>
+                    </td>
+                    <td><a href="/update-status/<%= payment.reff %>">Update Status</a></td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>

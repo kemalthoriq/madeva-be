@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "kemal_backend",
+        "password": "19229036",
+        "database": "madeva-be-kemal",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "kemal_backend",
+        "password": "19229036",
+        "database": "madeva-be-kemal",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "kemal_backend",
+        "password": "19229036",
+        "database": "madeva-be-kemal",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
+}
